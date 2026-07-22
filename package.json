@@ -1,0 +1,20 @@
+{
+  "name": "testautomation_cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "chrome": "cypress run --browser chrome --headed",
+    "firefox": "cypress run --browser firefox --headed",
+    "edge": "cypress run --browser edge --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^15.18.1",
+    "cypress-mochawesome-reporter": "^4.0.2",
+    "mochawesome": "^7.1.4"
+  }
+}

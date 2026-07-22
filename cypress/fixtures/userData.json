@@ -1,0 +1,12 @@
+{
+  "url":"https://www.saucedemo.com/",
+  "username": "standard_user",
+  "lockedUser":"locked_out_user",
+  "password": "secret_sauce",
+  "invalidUsername":"stand",
+  "invalidCredsErrorMsg":"Epic sadface: Username and password do not match any user in this service",
+  "invalidPassword":"1111",
+  "emptyUsernameErrorMsg":"Epic sadface: Username is required",
+  "emptyPasswordErrorMsg":"Epic sadface: Password is required",
+  "lockedUserErrorMsg":"Epic sadface: Sorry, this user has been locked out."
+}

@@ -1,0 +1,112 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-14T08:02:41.141Z",
+    "end": "2026-05-14T08:02:54.449Z",
+    "duration": 13308,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c61c7205-53b5-428f-930b-3464a1d1a17d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b9a91be6-0d01-426b-a03a-bfca740c221c",
+          "title": "login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "passes",
+              "fullTitle": "login passes",
+              "timedOut": null,
+              "duration": 13258,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/login');",
+              "err": {},
+              "uuid": "765c9d5e-dff5-46b1-88d8-a6266f3c09b2",
+              "parentUUID": "b9a91be6-0d01-426b-a03a-bfca740c221c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "765c9d5e-dff5-46b1-88d8-a6266f3c09b2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13258,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "overwrite": false,
+        "autoOpen": false,
+        "code": true,
+        "timestamp": "longDate",
+        "showPassed": true,
+        "reportPageTitle": "Project Framework Practice",
+        "html": true,
+        "video": true,
+        "screenshotOnRunFailure": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
