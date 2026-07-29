@@ -29,5 +29,32 @@ describe('inventory Test case suit',()=>{
      it ('TC_I5 verify all product addtocart button are diaplayed',()=>{
         inventoryPage.verifyAddtoCartButtonVisible();
     })
+     it('TC_I6 verify product details page',()=>{
+        inventoryPage.verifyProductDetailsPage();
+    })
+    it('TC_I7 verify Back to Products',()=>{
+        inventoryPage.verifyBackToProdcuts();
+    })
+    it('TC_I8 verify Products description',()=>{
+        inventoryPage.verifyProdcutDescription();
+    })
+     it('TC_I9 Add one product to cart',()=>{
+        inventoryPage.verifyAddOneProductToCart();
+    })
+    it('TC_I10 Add multiple products to cart',()=>{
+        inventoryPage.verifyAddMultipleProductsToCart();
+    })
+    it('TC_I11 Remove product from inventory page',()=>{
+        inventoryPage.verifyRemoveProductFromInventoryPage();
+    })
+    it('TC_I12 Remove product from cart page',()=>{
+        inventoryPage.verifyRemoveProductFromCartPage();
+    })
+    it('TC_I13 Verify "Remove" button after adding',()=>{
+        inventoryPage.verifyRemoveBtnText();
+    })
+     it('TC_I14 Verify cart retains products after navigation',()=>{
+        inventoryPage.verifyCartRetainsProductsAfterNavigation();
+    })
     
 })

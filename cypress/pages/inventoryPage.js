@@ -10,7 +10,14 @@ class inventoryPage
     productNamesLocator=".inventory_item_name";
     productImagesLocator="a .inventory_item_img";
     productsPriceLocator=".inventory_item_price";
-    addtocartButtonLocator="button.btn_inventory"
+    addtocartButtonLocator="button.btn_inventory";
+    productTitleLocator=".inventory_details_name";
+    backToProductsLocator="#back-to-products";
+    inventoryContainerLocator="#inventory_container";
+    productDescriptionLocator=".inventory_details_desc";
+    cartBadgelocator=".shopping_cart_badge";
+    removeBtnLocator=".btn_secondary";
+    cartItemLocator=".cart_item"
 
     
 
@@ -58,6 +65,107 @@ class inventoryPage
       .each(($btn)=>{
          cy.wrap($btn).should('be.visible').contains('Add to cart')
       })
+    }
+    verifyProductDetailsPage()
+    {
+      cy.get(this.productNamesLocator).first().invoke('text')
+      .then((selectedProduct)=>{
+         cy.get(this.productNamesLocator).first().click();
+         cy.url().should("include","/inventory-item.html");
+         cy.get(this.productTitleLocator)
+         .should('be.visible')
+         .and('have.text',selectedProduct)
+      });
+   
+    }
+    verifyBackToProdcuts()
+    {
+      cy.get(this.productNamesLocator).first().click();
+      cy.url().should("include","/inventory-item.html");
+      cy.get(this.backToProductsLocator)
+         .should('be.visible')
+         .click();
+      cy.url().should("include","/inventory.html");
+      cy.get(this.inventoryContainerLocator).should('be.visible')
+      
+
+    }
+    verifyProdcutDescription()
+    {
+      cy.get(this.productNamesLocator).first().click();
+      cy.url().should("include","/inventory-item.html");
+      cy.get(this.productDescriptionLocator)
+      .should('be.visible')
+      .and('not.be.empty')
+
+    }
+    verifyAddOneProductToCart(){
+      cy.get(this.addtocartButtonLocator).first().click();
+      cy.get(this.cartBadgelocator)
+      .should('be.visible')
+      .and('have.text','1')
+
+    }
+    verifyAddMultipleProductsToCart(){
+      cy.get(this.addtocartButtonLocator)
+      .eq(0).click();
+      cy.get(this.addtocartButtonLocator)
+      .eq(1).click();
+      cy.get(this.addtocartButtonLocator)
+      .eq(4).click();
+      cy.get(this.cartBadgelocator)
+      .should('be.visible')
+      .and('have.text',"3")
+    }
+    verifyRemoveProductFromInventoryPage(){
+      cy.get(this.addtocartButtonLocator)
+      .eq(0).click();
+      cy.get(this.addtocartButtonLocator)
+      .eq(1).click();
+      cy.get(this.addtocartButtonLocator)
+      .eq(4).click();
+      cy.get(this.cartBadgelocator)
+      .should('be.visible')
+      .and('have.text',"3")
+      cy.get(this.removeBtnLocator).first().click()
+      cy.get(this.cartBadgelocator)
+      .should('be.visible')
+      .and('have.text',"2")
+    }
+    verifyRemoveProductFromCartPage(){
+      cy.get(this.addtocartButtonLocator)
+      .eq(0).click();
+      cy.get(this.addtocartButtonLocator)
+      .eq(1).click();
+      cy.get(this.addtocartButtonLocator)
+      .eq(4).click();
+      cy.get(this.cartBadgelocator)
+      .should('be.visible')
+      .and('have.text',"3");
+      cy.get(this.cartIconSelector).click();
+      cy.get(this.removeBtnLocator).first().click();
+      cy.get(this.cartBadgelocator)
+      .should('be.visible')
+      .and('have.text','2');
+      
+    }
+    verifyRemoveBtnText()
+    {
+      cy.get(this.addtocartButtonLocator).first().click()
+      cy.get(this.removeBtnLocator).should('be.visible')
+      .and('have.text','Remove')
+    }
+    verifyCartRetainsProductsAfterNavigation(){
+      cy.get(this.addtocartButtonLocator).first().click();
+      cy.get(this.cartBadgelocator).should('have.text','1');
+      cy.get(this.productNamesLocator).first().click();
+      cy.get(this.cartBadgelocator).should('have.text','1');
+      cy.get(this.backToProductsLocator).click();
+      cy.get(this.cartIconSelector).click();
+      cy.get(this.cartItemLocator).should('have.length',1)
+
+
+
     }
 }
 export default new inventoryPage();
