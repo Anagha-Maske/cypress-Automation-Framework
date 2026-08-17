@@ -19,12 +19,22 @@
 - Data Driven Testing
 
 ## Project Structure
-
 cypress/
- ├── e2e
- ├── pages
- ├── fixtures
- ├── support
+├── e2e/
+│   ├── APIAutomation/
+│   │   ├── auth.cy.js
+│   │   ├── booking.cy.js
+│   │   ├── dayOne.cy.js
+│   │   └── dayTwo.cy.js
+│   │
+│   └── UIAutomation/
+│       ├── cart.cy.js
+│       ├── inventory.cy.js
+│       └── login.cy.js
+│
+├── fixtures/
+├── pages/
+└── support/
 
 ## Run Project
 
