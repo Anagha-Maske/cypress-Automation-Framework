@@ -1,4 +1,4 @@
-import inventoryPage from "../pages/inventoryPage";
+import inventoryPage from "../../pages/inventoryPage";
 
 describe('inventory Test case suit',()=>{
      let data;  

@@ -1,7 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  allowCypressEnv: false,
+  
   reporter: 'cypress-mochawesome-reporter',
 
   reporterOptions: {
@@ -21,7 +21,9 @@ screenshotOnRunFailure: true,
 
     //json: true
   },
-
+  env: {
+  apiBaseUrl: "https://restful-booker.herokuapp.com"
+},
   e2e: {
     baseUrl: "https://www.saucedemo.com/",
     specPattern: "cypress/e2e/**/*.cy.js",

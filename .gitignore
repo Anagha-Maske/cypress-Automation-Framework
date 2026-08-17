@@ -2,3 +2,13 @@ node_modules/
 cypress/videos/
 cypress/screenshots/
 .env
+# Cypress generated files
+cypress/screenshots/
+cypress/videos/
+cypress/reports/
+
+# Dependencies
+node_modules/
+
+# Environment files
+.env

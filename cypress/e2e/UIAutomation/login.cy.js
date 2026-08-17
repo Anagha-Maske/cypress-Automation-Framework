@@ -1,5 +1,5 @@
-import inventoryPage from "../pages/inventoryPage";
-import loginPage from "../pages/loginPage";
+import inventoryPage from "../../pages/inventoryPage";
+import loginPage from "../../pages/loginPage";
 
 describe('login', () => {
 
